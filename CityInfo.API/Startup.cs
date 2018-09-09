@@ -20,11 +20,13 @@ namespace CityInfo.API
         public static IConfiguration Configuration { get; private set; }
 
         public Startup(IConfiguration config)
+        //public Startup(IHostingEnvironment env)
         {
             //For ASP.net core 1
             //var builder = new ConfigurationBuilder()
             //    .SetBasePath(env.ContentRootPath)
-            //    .AddJsonFile("appsettings.json",optional: false,reloadOnChange: true);
+            //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            //    .AddJsonFile($"appsettings.{env.EnvironmentName}.json",optional:true,reloadOnChange:true);
 
             //Configuration = builder.Build();
             Configuration = config;
